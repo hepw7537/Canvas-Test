@@ -13,3 +13,7 @@ myImage.onload = function() {
    myCanvas.height = myImage.height;
     ctx.drawImage(myImage, 0, 0, myCanvas.width, myCanvas.height);
 }; 
+
+function changeImage(){}
+
+function addFilter(){}
