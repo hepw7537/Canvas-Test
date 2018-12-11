@@ -49,6 +49,16 @@ function addFilter(){
     dataArray[i + 1] = 255 - dataArray[i + 1];
     dataArray[i + 2] = 255 - dataArray[i + 2];
   }
+    for(let i = 0; i < l ; i += 4){
+       let brightness = 0.34 * dataArray[i] + 0.5 * dataArray[i + 1] + 0.16 * dataArray[i + 2];
+          // red
+          dataArray[i] = brightness;
+          // green
+          dataArray[i + 1] = brightness;
+          // blue
+          dataArray[i + 2] = brightness;
+        }
+
       // Write the data back to canvas
   ctx.putImageData(imageData, 0 , 0);
 }
